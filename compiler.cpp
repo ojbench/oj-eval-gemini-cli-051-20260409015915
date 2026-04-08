@@ -290,7 +290,8 @@ int main() {
                 cout << memory[inst.address] << " ";
             }
             for (int i = 0; i < inst.items.size(); i++) {
-                cout << memory[inst.items[i].address] << " ";
+                cout << memory[inst.items[i].address];
+                if (i < inst.items.size() - 1 || inst.opcode != -1) cout << " ";
             }
             cout << endl;
         }
